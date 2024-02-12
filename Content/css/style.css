@@ -1,0 +1,359 @@
+
+/* Style quizz */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #673ab7; /* Couleur de fond violet */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.quiz-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.question {
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #333;
+}
+
+.question p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.choices label {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choices input[type='radio'] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.choices label:hover,
+.choices input[type='radio']:checked + label {
+    background-color: #e0e0e0; /* Couleur de survol et sélection */
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e91e63; /* Couleur de fond pour le bouton */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {
+    background-color: #c2185b; /* Couleur de survol pour le bouton */
+}
+
+/* Styles pour la pagination du quiz ou le numéro de question */
+.quiz-progress {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Style pour l'indicateur de question courante */
+.quiz-progress span {
+    color: #fff;
+    font-weight: bold;
+}
+
+label.correct {
+    background-color: green;
+}
+
+label.incorrect {
+    background-color: red;
+}
+
+
+
+
+/* Style inscription */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 400px;
+
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914; /* Couleur rouge Netflix */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-container button:hover {
+    background-color: #f40612;
+}
+
+
+/* CONTINENT */
+/* Conteneur principal pour les continents */
+.continent-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Cela répartira l'espace uniformément entre les éléments */
+}
+
+/* Boîte individuelle pour chaque continent */
+.continent-box {
+    flex-basis: calc(50% - 10px); /* Calcule la largeur de chaque boîte pour qu'il y en ait deux par ligne, en soustrayant la marge */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Centre horizontalement les éléments à l'intérieur */
+    text-align: center;
+    justify-content: center;
+
+}
+
+/* Image du continent */
+.continent-image {
+    width: 100%; /* Prend toute la largeur de .continent-box */
+    flex-grow: 1; /* Permet à l'image de grandir et de remplir l'espace disponible */
+    object-fit: cover; /* S'assure que l'image couvre l'espace sans déformation */
+}
+
+/* Information du continent */
+.continent-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments à l'intérieur */
+    width: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+/* Bouton pour choisir un continent */
+.choose-continent-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+    width: auto; /* Ajustez la largeur selon vos préférences */
+    left: 50%; /* Démarre le bouton à 50% du conteneur parent */
+    transform: translateX(-50%);
+    bottom: 10px;
+    position: absolute;
+}
+
+.choose-continent-btn:hover {
+    background-color: #0056b3;
+
+}
+
+.continent-info h2,
+.continent-info p {
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 0; /* Réinitialise les marges par défaut */
+    padding: 0 10px; /* Ajoute un peu de padding horizontal pour éviter que le texte touche les bords */
+}
+
+/* Styles spécifiques pour le titre */
+.continent-info h2 {
+    font-family: 'Arial', sans-serif; /* Utilisez la police de votre choix */
+    font-size: 24px; /* Taille de la police pour le titre */
+    font-weight: bold; /* Rendre le titre gras */
+    color: #333; /* Couleur de la police */
+    margin-bottom: 10px; /* Espace entre le titre et la description */
+}
+
+/* Styles spécifiques pour la description */
+.continent-info p {
+    font-family: 'Arial', sans-serif; /* Utilisez la police de votre choix */
+    font-size: 16px; /* Taille de la police pour la description */
+    color: #666; /* Couleur de la police plus claire pour la description */
+    line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+    margin-bottom: 20px; /* Espace entre la description et le bouton */
+}
+
+/* Media query pour ajuster la mise en page sur les écrans plus petits */
+@media (max-width: 600px) {
+    .continent-box {
+        flex-basis: 100%; /* Chaque boîte prendra toute la largeur sur les petits écrans */
+    }
+}
+
+
+
+/* RUBRIQUE */
+/* CSS styles */
+.rubrique-forum-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.rubrique-question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.rubrique-titre-input, .rubrique-textearea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.rubrique-post-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.rubrique-question-card {
+    background: #f9f9f9;
+    border-left: 4px solid #007bff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.rubrique-question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rubrique-question-header h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.rubrique-question-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.rubrique-question-body p {
+    font-size: 14px;
+    color: #333;
+}
+
+.rubrique-question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rubrique-question-author {
+    font-size: 14px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.rubrique-reply-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.rubrique-reply-btn:hover {
+    background-color: #218838;
+}
+
+/* Si vous souhaitez ajouter des icônes, vous pouvez inclure une librairie comme Font Awesome et les ajouter dans le HTML */
+
+
+/* Ensure you include the rest of your styles */
+
+
